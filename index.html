@@ -5,21 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   
   <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution {
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed; /* вместо absolute */
+    bottom: 5px;
+    width: 100%; /* чтобы растянуть по всей ширине */
+    }
 
     .attribution a { color: hsl(228, 45%, 44%); }
     
     body {
       background-color: hsl(47, 88%, 63%);
+      /* height: 100vh; */
+      display: flex;
+      justify-content: center; /* по горизонтали */
+      align-items: center;     /* по вертикали */
+      margin: 0; /* убираем отступы по умолчанию */
     }
 
     .photo {
       border-radius: 10px;
+      width: 320px;
+      height: auto;
+    }
+
+    .main p, h2 {
+      font-family: 'Figtree', sans-serif;
     }
 
 
@@ -27,9 +46,12 @@
       background-color: hsl(0, 0%, 100%);
       padding: 20px;
       border-radius: 20px;
-      width: 300px;
-      height: 500px;
+      width: 320px;
+      height: 460px;
       text-align: left;
+      margin-top: 150px;
+      border: 1px solid black;
+      box-shadow: 10px 10px rgba(0, 0, 0, 1);
     }
 
     .learn {
@@ -39,7 +61,25 @@
       padding-right:  10px;
       border-radius: 5px;
       display: inline-block;
+      margin-top: 20px;
+      font-family: 'Figtree', sans-serif;
     }
+    
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Figtree', sans-serif;
+    }
+
+
+    .photo2 {
+      width: 30px;
+      height: auto;
+    }
+
+
 
 
   </style>
@@ -49,21 +89,24 @@
 
     <img class="photo" src="assets/images/illustration-article.svg" alt="фото"> 
 
-    <div class="learn"><b>Learning</b></div>
+    <div class="learn"><span style="color: hsl(0, 0%, 7%); font-weight: 950;">Learning</span></div>
 
-    <p>Published 21 Dec 2023</p>
+    <p><b>Published 21 Dec 2023</b></p>
 
     <h2>HTML & CSS foundations</h2>
 
-    <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <p style="margin-bottom: 25px; color: hsl(0, 0%, 42%); font-weight: 500;">These languages are the backbone of every website, defining structure, content, and presentation.</p>
 
-    <p>Greg Hooper</p>
+    <div class="profile">
+      <img src="assets/images/image-avatar.webp" alt="фото профиля" class="photo2">
+      <span style="color: hsl(0, 0%, 7%); font-weight: 950;">Greg Hooper</span>
+    </div>
 
   </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/xlebovoz">XLEBOVOZ</a>.
   </div>
 </body>
 </html>
